@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <title>Search | Moview</title>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/all.min.css" />
+        <link rel="stylesheet" href="../css/fontawesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/moviewstylesheet.css" />
+        <style>
+            .search-wrapper{
+                height: 100px;
+                display: flex;
+                align-items: center;
+            }
+
+            
+            #result-container{
+                width: 900px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0px auto 0px auto;
+            }
+
+            .movie-box{
+                display: none;
+                margin: 0px auto 0px auto;
+            }
+
+            @media (max-width: 1000px){
+                #result-container{
+                    width: 700px;
+                }
+
+            }
+
+            @media (max-width: 800px){
+                #result-container{
+                    width: 400px;
+                }
+            }
+
+            @media (max-width: 600px){
+                #result-container{
+                    width: 400px;
+                }
+            }
+        </style>
+    <body>
+        <!-- Header -->
+        <div class="top-bar">
+            <img src="../images/homepage-images/moview-logo.gif" alt="Moview Logo" id="logo">
+            <div id="nav-bar" class="nav-bar-hide">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Reviews</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+            <div class="menu-icon"><i id="icon" class="fa-solid fa-bars" onclick="toggleMenu(this)"></i></div>
+        </div> 
+        </div>
+        <div class="search-wrapper">
+            <div class="search-container">
+                <input type="text" name="search-bar" placeholder="Enter Movie Name" id="search-box" />
+                <button id="search-btn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="result-container">
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/ambulance-movie-poster.jpg" alt="Ambulance(2022)" /></a>
+                    <div class="movie-info">
+                        <a href="ambulance-review.html"><h3 class="movie-title">Ambulance (2022)</h3></a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Action/Thriller</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/a-quiet-place-2-movie-poster.jpg"
+                        alt="A Quiet Place 2(2020)" /></a>
+                        <div class="movie-info">
+                            <a href="a-quiet-place-review.html">
+                                <h3 class="movie-title">A Quiet Place II (2020)</h3>
+                            </a>
+                            <h4><i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i></h4>
+                            <h4>Thriller/Sci-fi</h4>
+                        </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/belle-movie-poster.jpg" alt="Belle(2021)" /></a>
+                    <div class="movie-info">
+                        <a href="belle-review.html">
+                            <h3 class="movie-title">Belle (2021)</h3>
+                        </a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Adventure/Drama</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/death-on-the-nile-movie-poster.jpg"
+                        alt="Death On The Nile(2022)" /></a>
+                        <div class="movie-info">
+                            <h4>
+                            <a href="death-on-the-nile-review.html"><h3 class="movie-title">Death On The Nile (2022)</h3></a>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i></h4>
+                            <h4>Mystery/Crime</h4>
+                        </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/dog-movie-poster.jpg" alt="Dog(2022)" /></a>
+                    <div class="movie-info">
+                        <h4>
+                        <a href="dog-review.html"><h3 class="movie-title">Dog (2022)</h3></a>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Comedy/Road</h4>
+                    </div>  
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/dune-movie-poster.jpg" alt="Dune(2021)" /></a>
+                    <div class="movie-info">
+                        <a href="dune-review.html">
+                            <h3 class="movie-title">Dune (2021)</h3>
+                        </a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Sci-fi/Adventure</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/jujutsu-kaisen-0-movie-poster.jpg"
+                        alt="Jujutsu Kaisen 0(2021)" /></a>
+                   <div class="movie-info">
+                                <a href="jujutsu-kaisen-0-review.html">
+                                    <h3 class="movie-title">Jujutsu Kaisen 0 (2021)</h3>
+                                </a>
+                                <h4>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i></h4>
+                                <h4>Action/Fantasy</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/kimi-movie-poster.jpg" alt="Kimi(2022)" /></a>
+                    <div class="movie-info">
+                        <a href="kimi-review.html">
+                            <h3 class="movie-title">Kimi (2022)</h3>
+                        </a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Thriller/Crime</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/moonfall-movie-poster.jpg" alt="Moonfall(2022)" /></a>
+                    <div class="movie-info">
+                        <h4>
+                        <a href="moonfall-review.html"><h3 class="movie-title">Moonfall (2022)</h3></a>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Sci-fi/Action</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/shang-chi-movie-poster.jpeg" alt="Shang-Chi(2021)" /></a>
+                    <div class="movie-info">
+                        <a href="shang-chi-review.html">
+                            <h3 class="movie-title">Shang-Chi and The Legend of The Ten Rings (2021)</h3>
+                        </a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Action/Fantasy</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/spiderman-no-way-home-movie-poster.jpg"
+                        alt="Spiderman: No Way Home(2021)" /></a>
+                        <div class="movie-info">
+                            <a href="no-way-home-review.html">
+                                <h3 class="movie-title">Spiderman: No Way Home (2021)</h3>
+                            </a>
+                            <h4>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i></h4>
+                            <h4>Action/Adventure</h4>
+                        </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/the-batman-movie-poster.jpg" alt="The Batman(2022)" /></a>
+                    <div class="movie-info">
+                        <h4>
+                        <a href="the-batman-review.html"><h3 class="movie-title">The Batman (2022)</h3></a>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Action/Adventure</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/the-mitchells-vs-the-machines-movie-poster.jpg"
+                        alt="The Mitchells vs. The Machines(2021)" /></a>
+                    <div class="movie-info">
+                        <a href="the-mitchells-vs-the-machines-review.html">
+                            <h3 class="movie-title">The Mitchells vs. The Machines (2021)</h3>
+                        </a>
+                        <h4>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </h4>
+                        <h4>Comedy/Adventure</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/the-royal-treatment-movie-poster.jpg"
+                        alt="The Royal Treatment(2022)" /></a>
+                        <div class="movie-info">
+                            <h4>
+                            <a href="the-royal-treatment-review.html"><h3 class="movie-title">The Royal Treatment (2022)</h3></a>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i></h4>
+                            <h4>Romance/Family</h4>
+                        </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/turning-red-movie-poster.jpg" alt="Turning Red(2022)" /></a>
+                    <div class="movie-info">
+                        <a href="turning-red-review.html">
+                            <h3 class="movie-title">Turning Red (2022)</h3>
+                        </a>
+                        <h4>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Family/Comedy</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/uncharted-movie-poster.jpg" alt="Uncharted(2022)" /></a>
+                    <div class="movie-info">
+                        <h4>
+                        <a href="uncharted-review.html`"><h3 class="movie-title">Uncharted (2022)</h3></a>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i></h4>
+                        <h4>Family/Comedy</h4>
+                    </div>
+                </div>
+                <div class="movie-box">
+                    <img class="movie-img" src="../images/homepage-images/justic-league-movie-poster.jpg"
+                        alt="Justice League(2021)" /></a>
+                        <div class="movie-info">
+                            <a href="zack-snyder's-justice-league-review.html">
+                                <h3 class="movie-title">Zack Snyder's Justice League (2021)</h3>
+                            </a>
+                            <h4>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i></h4>
+                            <h4>Action/Adventure</h4>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer! -->
+        <footer>
+            <p class="moview-text"><b>MOVIEW</b><br />Your Number 1. Movie Reveiw Website</p>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Reviews</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>Images, and review text are not properties of Moview, but have been downloaded and/or copied
+                        for demonstration purposes.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Moview © 2022 - All Rights Reserved</p>
+        </footer>
+        <script src="../js/moviewjavascript.js"></script>
+        <script src="../js/reviewjs.js"></script>
+    </body>
+</html>
